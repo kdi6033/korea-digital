@@ -12,7 +12,8 @@
 
 순서
 
-[!1](https://ibb.co/Br3Q85N)
+![1](https://user-images.githubusercontent.com/59568377/122491263-9ad24580-d01e-11eb-92cf-f61cb3d44cd0.jpg)
+
                       
 
 
