@@ -52,9 +52,9 @@ void serialEvent() {
     float sT=((float)inputString.charAt(5)*256+(float)inputString.charAt(6))/100;
     float sE=((float)inputString.charAt(7)*256+(float)inputString.charAt(8))/100;
     
-    String MO = mo+sM;
-    String TEM = tem+sT;
-    String EC = ec+sE;
+    String MO = mo+sM+"%VWC";
+    String TEM = tem+sT+"°C";
+    String EC = ec+sE+"dS/m";
   
     Serial.println(MO);
     Serial.println(TEM);
