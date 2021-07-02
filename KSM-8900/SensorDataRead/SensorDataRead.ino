@@ -1,8 +1,4 @@
-// 참조유튜브 : https://youtu.be/JHngW6Gf4sU
-// crc16 rtu를 사용하기 위해 다음 라이브러리 설치하세요.
-// crc16 modbus
-//  https://github.com/RobTillaart/CRC
-//  AUTHOR: Rob Tillaart
+
 #include <ArduinoJson.h>
 #include <Ticker.h>
 #include "CRC.h"
