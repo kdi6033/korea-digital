@@ -6,18 +6,12 @@
 Ticker ticker;
 SoftwareSerial mySerial(D7, D4); // RX, TX
 
-//json을 위한 설정
-StaticJsonDocument<200> doc;
-DeserializationError error;
-JsonObject root;
-//const char* ssid     = "i2r";
-//const char* password = "00000000";
-String inputString = "";         // 받은 문자열
+
+String inputString = "";     
 int counter=0;
 
 void tick()
 {
- // Serial.println ( WiFi.localIP() );
   counter++;
   crd16Rtu();
 }
@@ -26,21 +20,7 @@ void setup() {
   Serial.begin(115200);
   mySerial.begin(115200);
 
- // WiFi.mode(WIFI_STA);
- //WiFi.begin(ssid, password);
-
- // while (WiFi.status() != WL_CONNECTED) {
- //   delay(500);
- //   Serial.print(".");
-  
-
-//  Serial.println("");
-//  Serial.println("WiFi connected");
-//  Serial.println("IP address: ");
-//  Serial.println(WiFi.localIP());
-
-  ticker.attach(3, tick);  //0.1 초도 가능
-  //ticker.detach();
+  ticker.attach(3, tick);
 }
 
 void loop() {
@@ -87,7 +67,7 @@ void serialEvent() {
 
 // 아두이노에서 RS485 출력을 내보낸다.
 void crd16Rtu() {
-  char str[24] =  {0x01,0x04,0x00,0x07,0x00,0x03,0x00,0x00};  //[1,4,0,7,0,3,0,0],[1,4,0,1,0,6,0,0]
+  char str[24] =  {0x01,0x04,0x00,0x07,0x00,0x03,0x00,0x00};  //[1,4,0,7,0,3,0,0]
   String s;
   int si,sj,len;
 
